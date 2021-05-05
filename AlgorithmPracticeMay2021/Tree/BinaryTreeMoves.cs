@@ -41,25 +41,47 @@ namespace AlgorithmPracticeMay2021.Tree
                     return;
                 }
                 else
-                {
-                    if (target < 0 && node.Data < target)
-                    {
-                        Console.WriteLine($"Past expected Value");
-                        
-                    }
-                    else
-                    {
+                {  
                         if (node.Left == null && node.Right == null)
                         {
                             node.GenerateLeftChildren(currentLeft, currentRight);
-                            //node.GenerateRightChildren(currentLeft, currentRight);
+                            node.GenerateRightChildren(currentLeft, currentRight);
                         }
 
-                        checkNode(target, node.Left, node.Left.Data, node.Right.Data);
-                        // checkNode(target, node.Right, node.Left.Data, node.Right.Data);
+                    if (target < 0 && node.Data < target)
+                    {
+                        Console.WriteLine($"Past expected Value");
+                        return;
                     }
+                    else if (target > 0 && node.Data > target)
+                    {
+                        Console.WriteLine($"Past expected Value");
+                        return;
+                    }
+                    else
+                    {
+                        // check left Node
+                        if (isValidLeftNodeCheck(target, node.Left.Data) && isValidRigtNodeCheck(target, node.Right.Data))
+                        {
+                            checkNode(target, node.Left, node.Left.Data, node.Right.Data);
+                            //check right Node
+                            checkNode(target, node.Right, node.Left.Data, node.Right.Data);
+                        }
+                    }
+                    
                 }
             }
+        }
+
+
+        public bool isValidLeftNodeCheck(int target, int nodeValue)
+        {
+            return !(target < 0 && nodeValue < target);
+        }
+
+        public bool isValidRigtNodeCheck(int target, int nodeValue)
+        {
+            return !(target < 0 && nodeValue < target);
         }
 
         public void printNode(Node node)

@@ -8,7 +8,7 @@ namespace AlgorithmPracticeMay2021
         static void Main(string[] args)
         {
             Console.WriteLine("Tree Practice");
-            TestTrees();
+            //TestTrees();
 
         }
 
