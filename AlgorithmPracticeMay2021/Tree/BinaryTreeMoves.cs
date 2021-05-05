@@ -18,8 +18,6 @@ namespace AlgorithmPracticeMay2021.Tree
             _target = target;
             root = new Node(left, left, right);
         }
-
-
         public void printNode(Node node)
         {
             if(node != null)
@@ -27,6 +25,8 @@ namespace AlgorithmPracticeMay2021.Tree
                 Console.WriteLine($"node is { node.Data } ");
             }
         }
+
+        public Node  Root { get { return root; } }
     }
 
     public class Node

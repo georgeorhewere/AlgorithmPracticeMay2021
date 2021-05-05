@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlgorithmPracticeMay2021.Tree;
+using System;
 
 namespace AlgorithmPracticeMay2021
 {
@@ -6,7 +7,15 @@ namespace AlgorithmPracticeMay2021
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Tree Practice");
+
+        }
+
+        public static void TestTrees()
+        {
+            BinaryTreeMoves tree = new BinaryTreeMoves();
+            tree.findMoves(-11);
+            tree.printNode(tree.Root);
         }
     }
 }
