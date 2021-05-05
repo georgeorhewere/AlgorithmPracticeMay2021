@@ -8,6 +8,7 @@ namespace AlgorithmPracticeMay2021
         static void Main(string[] args)
         {
             Console.WriteLine("Tree Practice");
+            TestTrees();
 
         }
 
@@ -15,7 +16,7 @@ namespace AlgorithmPracticeMay2021
         {
             BinaryTreeMoves tree = new BinaryTreeMoves();
             tree.findMoves(-11);
-            tree.printNode(tree.Root);
+            //tree.printNode(tree.Root);
         }
     }
 }
