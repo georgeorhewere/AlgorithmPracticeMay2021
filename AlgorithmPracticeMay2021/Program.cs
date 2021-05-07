@@ -9,9 +9,16 @@ namespace AlgorithmPracticeMay2021
         {
             Console.WriteLine("Tree Practice");
             //TestTrees();
+            TestBettingGame();
 
         }
 
+
+        public static void TestBettingGame()
+        {
+            BettingGame game = new BettingGame();
+            game.minimumMoves(10,10);
+        }
         public static void TestTrees()
         {
             BinaryTreeMoves tree = new BinaryTreeMoves();
